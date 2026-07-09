@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operation Good Vibes 🐈</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Calendar -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body>
+
+<!-- Floating Cats -->
+
+<div class="background">
+
+    <img src="cats/cat1.jpg" class="cat c1">
+    <img src="cats/cat2.jpg" class="cat c2">
+    <img src="cats/cat3.jpg" class="cat c3">
+    <img src="cats/cat4.jpg" class="cat c4">
+    <img src="cats/cat5.jpg" class="cat c5">
+    <img src="cats/cat6.jpg" class="cat c6">
+
+</div>
+
+
+<!-- Glass Card -->
+
+<div class="card">
+
+    <h3>🐈 CAT COMMITTEE</h3>
+
+    <h1>Operation Good Vibes</h1>
+
+    <p>
+
+        After reviewing over <b>12,483 applications</b>,
+        you have been selected for a classified mission.
+
+    </p>
+
+    <button id="startBtn">
+        Accept Mission 🐾
+    </button>
+
+</div>
+
+
+<!-- Hidden Question -->
+
+<div class="question hidden">
+
+    <h1>
+
+        One tiny question...
+
+    </h1>
+
+    <p>
+
+        Would you go somewhere to hangout actually i am very bad at small talk
+
+    </p>
+
+    <div class="buttons">
+
+        <button id="yesBtn">
+
+            YES 😌
+
+        </button>
+
+        <button id="noBtn">
+
+            NO 🙄
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- Calendar -->
+
+<div class="calendar hidden">
+
+    <h1>
+
+        Mission Accepted ✅
+
+    </h1>
+
+    <p>
+
+        Choose the day for our adventure.
+
+    </p>
+
+    <input id="datePicker">
+
+    <button id="confirmDate">
+
+        Confirm Date ❤️
+
+    </button>
+
+</div>
+
+
+<!-- Final Screen -->
+
+<div class="final hidden">
+
+<h1>
+
+🐈❤️🐈
+
+</h1>
+
+<h2>
+
+MISSION COMPLETE
+
+</h2>
+
+<p id="selectedDate"></p>
+
+<h3>
+
+Now all that's left is deciding
+where we create our first embarrassing memories.
+
+</h3>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

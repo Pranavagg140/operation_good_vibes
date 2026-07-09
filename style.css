@@ -1,0 +1,421 @@
+/* -------------------------
+   GLOBAL
+--------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow:hidden;
+
+    height:100vh;
+
+    background:linear-gradient(135deg,#ffe4ec,#fff7f2,#ffe8d6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* -------------------------
+   FLOATING CAT BACKGROUND
+--------------------------*/
+
+.background{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.cat{
+
+    position:absolute;
+
+    width:160px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    animation:float 8s ease-in-out infinite;
+
+    transition:.4s;
+
+    opacity:.9;
+
+}
+
+.cat:hover{
+
+    transform:scale(1.08) rotate(5deg);
+
+}
+
+/* Positions */
+
+.c1{
+
+    top:8%;
+
+    left:6%;
+
+    animation-delay:0s;
+
+}
+
+.c2{
+
+    top:20%;
+
+    right:8%;
+
+    animation-delay:2s;
+
+}
+
+.c3{
+
+    bottom:8%;
+
+    left:12%;
+
+    animation-delay:1s;
+
+}
+
+.c4{
+
+    bottom:18%;
+
+    right:12%;
+
+    animation-delay:3s;
+
+}
+
+.c5{
+
+    top:45%;
+
+    left:2%;
+
+    animation-delay:5s;
+
+}
+
+.c6{
+
+    top:55%;
+
+    right:2%;
+
+    animation-delay:4s;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px) rotate(-3deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px) rotate(3deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0px) rotate(-3deg);
+
+    }
+
+}
+
+/* -------------------------
+   GLASS CARD
+--------------------------*/
+
+.card,
+.question,
+.calendar,
+.final{
+
+    width:700px;
+
+    max-width:90%;
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    border-radius:30px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    animation:popup .8s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:translateY(40px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* -------------------------
+   TEXT
+--------------------------*/
+
+h1{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+    color:#222;
+
+}
+
+h2{
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    color:#ff4d88;
+
+    margin-bottom:20px;
+
+}
+
+p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#444;
+
+    margin-bottom:30px;
+
+}
+
+/* -------------------------
+   BUTTONS
+--------------------------*/
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+#startBtn,
+#yesBtn,
+#confirmDate{
+
+    background:#ff5c8a;
+
+    color:white;
+
+}
+
+#startBtn:hover,
+#yesBtn:hover,
+#confirmDate:hover{
+
+    background:#ff3470;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(255,92,138,.4);
+
+}
+
+#noBtn{
+
+    background:white;
+
+    color:#444;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+/* -------------------------
+   CALENDAR
+--------------------------*/
+
+#datePicker{
+
+    width:280px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:none;
+
+    margin-bottom:25px;
+
+    font-size:18px;
+
+    text-align:center;
+
+}
+
+/* -------------------------
+   FINAL SCREEN
+--------------------------*/
+
+.final h1{
+
+    font-size:70px;
+
+}
+
+.final h2{
+
+    color:#ff4d88;
+
+}
+
+#selectedDate{
+
+    font-size:28px;
+
+    color:#222;
+
+    font-weight:bold;
+
+    margin:20px 0;
+
+}
+
+/* -------------------------
+   RESPONSIVE
+--------------------------*/
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    p{
+
+        font-size:17px;
+
+    }
+
+    .cat{
+
+        width:100px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    button{
+
+        width:220px;
+
+    }
+
+    .card,
+    .question,
+    .calendar,
+    .final{
+
+        padding:35px 20px;
+
+    }
+
+}
